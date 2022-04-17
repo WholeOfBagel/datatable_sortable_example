@@ -14,13 +14,13 @@ Future main() async {
 }
 
 class MyApp extends StatelessWidget {
-  static final String title = 'Data Table';
+  static final String title = 'My Saved';
 
   @override
   Widget build(BuildContext context) => MaterialApp(
         debugShowCheckedModeBanner: false,
         title: title,
-        theme: ThemeData(primarySwatch: Colors.deepOrange),
+        theme: ThemeData(primarySwatch: Colors.grey),
         home: MainPage(),
       );
 }
@@ -35,14 +35,14 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) => TabBarWidget(
         title: MyApp.title,
         tabs: [
-          Tab(icon: Icon(Icons.sort_by_alpha), text: 'Sortable'),
-          Tab(icon: Icon(Icons.select_all), text: 'Selectable'),
-          Tab(icon: Icon(Icons.edit), text: 'Editable'),
+          Tab(icon: Icon(Icons.sort_by_alpha), text: 'Sort Variants'),
+          //Tab(icon: Icon(Icons.select_all), text: 'Selectable'),
+          //Tab(icon: Icon(Icons.edit), text: 'Editable'),
         ],
         children: [
           SortablePage(),
-          Container(),
-          Container(),
+          //Container(),
+          //Container(),
         ],
       );
 }
